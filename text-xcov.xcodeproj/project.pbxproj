@@ -12,7 +12,8 @@
 		6DD71C5B1DFF65BB00E59994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD71C591DFF65BB00E59994 /* Main.storyboard */; };
 		6DD71C5D1DFF65BB00E59994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DD71C5C1DFF65BB00E59994 /* Assets.xcassets */; };
 		6DD71C601DFF65BB00E59994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD71C5E1DFF65BB00E59994 /* LaunchScreen.storyboard */; };
-		6DD71C6B1DFF65BB00E59994 /* text_xcovTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD71C6A1DFF65BB00E59994 /* text_xcovTests.swift */; };
+		6DD71C761DFF65CB00E59994 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD71C751DFF65CB00E59994 /* User.swift */; };
+		6DD71C781DFF66B800E59994 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD71C771DFF66B800E59994 /* UserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,9 @@
 		6DD71C5F1DFF65BB00E59994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DD71C611DFF65BB00E59994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DD71C661DFF65BB00E59994 /* text-xcovTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "text-xcovTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DD71C6A1DFF65BB00E59994 /* text_xcovTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = text_xcovTests.swift; sourceTree = "<group>"; };
 		6DD71C6C1DFF65BB00E59994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DD71C751DFF65CB00E59994 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6DD71C771DFF66B800E59994 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		6DD71C541DFF65BB00E59994 /* text-xcov */ = {
 			isa = PBXGroup;
 			children = (
+				6DD71C751DFF65CB00E59994 /* User.swift */,
 				6DD71C551DFF65BB00E59994 /* AppDelegate.swift */,
 				6DD71C571DFF65BB00E59994 /* ViewController.swift */,
 				6DD71C591DFF65BB00E59994 /* Main.storyboard */,
@@ -90,8 +93,8 @@
 		6DD71C691DFF65BB00E59994 /* text-xcovTests */ = {
 			isa = PBXGroup;
 			children = (
-				6DD71C6A1DFF65BB00E59994 /* text_xcovTests.swift */,
 				6DD71C6C1DFF65BB00E59994 /* Info.plist */,
+				6DD71C771DFF66B800E59994 /* UserTests.swift */,
 			);
 			path = "text-xcovTests";
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 					6DD71C651DFF65BB00E59994 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = XZ2J8VAMV6;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6DD71C511DFF65BB00E59994;
 					};
@@ -203,6 +207,7 @@
 			files = (
 				6DD71C581DFF65BB00E59994 /* ViewController.swift in Sources */,
 				6DD71C561DFF65BB00E59994 /* AppDelegate.swift in Sources */,
+				6DD71C761DFF65CB00E59994 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DD71C6B1DFF65BB00E59994 /* text_xcovTests.swift in Sources */,
+				6DD71C781DFF66B800E59994 /* UserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,11 +371,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XZ2J8VAMV6;
 				INFOPLIST_FILE = "text-xcovTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antondomashnev.text-xcovTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/text-xcov.app/text-xcov";
 			};
@@ -381,6 +388,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XZ2J8VAMV6;
 				INFOPLIST_FILE = "text-xcovTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

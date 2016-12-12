@@ -1,15 +1,16 @@
 //
-//  text_xcovTests.swift
-//  text-xcovTests
+//  UserTests.swift
+//  text-xcov
 //
 //  Created by Anton Domashnev on 13/12/2016.
 //  Copyright © 2016 Anton Domashnev. All rights reserved.
 //
 
 import XCTest
+
 @testable import text_xcov
 
-class text_xcovTests: XCTestCase {
+class UserTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,16 +22,9 @@ class text_xcovTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAge() {
+        let numberOfSecondsInTwoYears = 86400 * 30 * 12 * 2
+        let user = User(birthday: Date(timeIntervalSinceNow: Double(-numberOfSecondsInTwoYears)))
+        XCTAssertEqual(user.age, 1)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
